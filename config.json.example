@@ -1,0 +1,7 @@
+{
+  "homeserver": "",
+  "accessToken": "",
+  "storagePath": "./data/bot.json",
+  "cryptoPath": "./data/crypto",
+  "prefix": "a-"
+}
