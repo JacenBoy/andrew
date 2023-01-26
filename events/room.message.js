@@ -7,8 +7,6 @@ module.exports = async (client, roomId, event) => {
   const message = event["content"]["body"];
   const sender = event["sender"];
 
-  client.logger.debug(sender);
-
   // Check if the message starts with our prefix
   if (!message.startsWith(client.config.prefix)) return;
 
