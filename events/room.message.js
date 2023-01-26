@@ -1,7 +1,7 @@
 module.exports = async (client, roomId, event) => {
   // Don't handle unhelpful events (ones that aren't text messages, are redacted, or sent by us)
-  if (event['content']?.['msgtype'] !== 'm.text') return;
-  if (event['sender'] === await client.getUserId()) return;
+  if (event["content"]?.["msgtype"] !== "m.text") return;
+  if (event["sender"] === await client.getUserId()) return;
 
   // Load the message sender and content into their own more readable variables
   const message = event["content"]["body"];

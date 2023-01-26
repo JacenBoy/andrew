@@ -41,7 +41,9 @@ const init = async () => {
   AutojoinRoomsMixin.setupOnClient(client);
 
   // Now start the client
-  client.start().then(() => {client.logger.log("Bot has started", "ready")});
+  client.start().then(() => {
+    client.logger.log("Bot has started", "ready");
+  });
 
 // End top-level async/await function.
 };

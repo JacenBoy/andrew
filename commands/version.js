@@ -7,7 +7,7 @@ exports.run = async (client, roomId, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['ver','v'],
+  aliases: ["ver","v"],
   permLevel: "User"
 };
 
