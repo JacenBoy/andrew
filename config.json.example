@@ -3,5 +3,9 @@
   "accessToken": "",
   "storagePath": "./data/bot.json",
   "cryptoPath": "./data/crypto",
-  "prefix": "a-"
+  "prefix": "a-",
+
+  "ownerID": "",
+  "admins": [],
+  "support": []
 }
