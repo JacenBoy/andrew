@@ -16,8 +16,6 @@ module.exports = async (client, roomId, event) => {
   // args = ["Is", "this", "the", "real", "life?"]
   const args = message.slice(client.config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  client.logger.debug(`Command: ${command}`);
-  client.logger.debug(`Args: ${JSON.stringify(args)}`);
 
   // Check whether the command, or alias, exist in the collections defined
   // in app.js.

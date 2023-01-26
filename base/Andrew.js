@@ -27,6 +27,9 @@ class Andrew extends MatrixClient {
       this.logger.log(`Loading Command: ${commandName.split(".")[0]}`);
       const props = require(`../commands/${commandName}`);
       this.commands.set(props.help.name, props);
+      props.conf.aliases.forEach(alias => {
+        this.aliases.set(alias, props.help.name);
+      });
       return false;
     } catch (e) {
       return `Unable to load command ${commandName}: ${e}`;
@@ -37,6 +40,8 @@ class Andrew extends MatrixClient {
     let command;
     if (this.commands.has(commandName)) {
       command = this.commands.get(commandName);
+    } else if (this.aliases.has(commandName)) {
+      command = this.commands.get(this.aliases.get(commandName));
     }
     if (!command) return `The command \`${commandName}\` doesn"t seem to exist, nor is it an alias. Try again!`;
     if (command.shutdown) {
