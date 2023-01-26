@@ -1,0 +1,24 @@
+{
+  "name": "andrew",
+  "version": "0.1.0",
+  "description": "An anime-centric bot for Matrix",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacenBoy/andrew.git"
+  },
+  "author": "JacenBoy",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/JacenBoy/andrew/issues"
+  },
+  "homepage": "https://github.com/JacenBoy/andrew#readme",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "matrix-bot-sdk": "^0.6.3",
+    "node-kitsu": "^1.1.1"
+  }
+}
