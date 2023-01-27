@@ -97,7 +97,7 @@ class Andrew extends MatrixClient {
 
   // genEmbed - A function to mimic the embed functionality of Discord
   genEmbed({title, url = undefined, body, fields = [], image = undefined}) {
-    let titleString, imageBlock, fieldBlock = "";
+    let titleString = "", imageBlock = "", fieldBlock = "";
     if (url) {
       titleString = `<b><a href="${url}">${title}</a></b>`;
     } else {
