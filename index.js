@@ -7,7 +7,7 @@ const readdir = promisify(require("fs").readdir);
 
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`,
-// or `bot.something`, this is what we're refering to. Your client.
+// or `bot.something`, this is what we're referring to. Your client.
 const client = new Andrew(require("./config.json"));
 
 // We're doing real fancy node 8 async/await stuff here, and to do that
@@ -50,7 +50,7 @@ const init = async () => {
 
 init();
 
-/* MISCELANEOUS NON-CRITICAL FUNCTIONS */
+/* MISCELLANEOUS NON-CRITICAL FUNCTIONS */
 
 // EXTENDING NATIVE TYPES IS BAD PRACTICE. Why? Because if JavaScript adds this
 // later, this conflicts with native code. Also, if some other lib you use does

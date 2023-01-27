@@ -3,7 +3,7 @@ const {MatrixClient, SimpleFsStorageProvider, RustSdkCryptoStorageProvider} = re
 
 class Andrew extends MatrixClient {
   constructor (config) {
-    // Pass paremeters from the config to the MatrixClient class
+    // Pass parameters from the config to the MatrixClient class
     super(config.homeserver, config.accessToken, new SimpleFsStorageProvider(config.storagePath), new RustSdkCryptoStorageProvider(config.cryptoPath));
 
     // Load the config file into our modified class
@@ -93,6 +93,26 @@ class Andrew extends MatrixClient {
       return synin.substring(0, synin.lastIndexOf(" ", 502)) + "... (more)";
     }
     return synin;
+  }
+
+  // genEmbed - A function to mimic the embed functionality of Discord
+  genEmbed({title, url = undefined, body, fields = [], image = undefined}) {
+    let titleString, imageBlock, fieldBlock = "";
+    if (url) {
+      titleString = `<b><a href="${url}">${title}</a></b>`;
+    } else {
+      titleString = `<b>${title}</b>`;
+    }
+
+    if (image) {
+      imageBlock = `<p><img src="${image}" /></p>`;
+    }
+
+    fields.forEach((field) => {
+      fieldBlock += `<p><b>${field.name}</b><br />${field.value}</p>`;
+    });
+
+    return `<blockquote><p>${titleString}</p><p>${body}</p>${fieldBlock}${imageBlock}</blockquote>`;
   }
 
   // pad - Zero pad a number
