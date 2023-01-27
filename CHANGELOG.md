@@ -8,3 +8,7 @@ All notable changes to this project will be documented in this file.
 
 ### 1.0.1
 - Fix several issues with `eval`
+
+### 1.0.2
+- Improve `help` command
+- Add log entry when commands are run
