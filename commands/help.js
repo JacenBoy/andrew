@@ -9,6 +9,7 @@ help command, its extended help is shown.
 exports.run = async (client, roomId, args) => {
   if (!args[0]) {
     // General help
+    client.sendText(roomId, "You can find a complete list of commands at https://github.com/JacenBoy/andrew/wiki/Commands");
   } else {
     // Show individual command's help.
     if (client.commands.has(args[0])) {
