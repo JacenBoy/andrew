@@ -5,3 +5,6 @@ All notable changes to this project will be documented in this file.
 - Initial release
 - Added utility commands: `eval`, `help`, `reboot`, `reload`, `version`
 - Added anime commands: `anime`, `animesearch`, `manga`, `mangasearch`
+
+### 1.0.1
+- Fix several issues with `eval`

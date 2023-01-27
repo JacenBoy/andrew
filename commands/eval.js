@@ -10,10 +10,10 @@ exports.run = async (client, roomId, args) => {
   const code = args.join(" ");
   try {
     const evaled = eval(code);
-    client.sendText(roomId, code);
+    client.sendHtmlText(roomId, `<code class="language-javascript">${evaled}</code>`);
   }
   catch (ex) {
-    client.sendText(roomId, ex);
+    client.sendHtmlText(roomId, `<p><b>ERROR:</b></p><p>${ex}</p>`);
   }
 };
 
