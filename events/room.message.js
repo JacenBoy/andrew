@@ -32,6 +32,7 @@ module.exports = async (client, roomId, event) => {
 
   // If we've passed all these checks, it's probably okay to run the command
   try {
+    client.logger.cmd(`${sender} ran command ${cmd.help.name}`);
     await cmd.run(client, roomId, args);
   }
   catch (ex) {
